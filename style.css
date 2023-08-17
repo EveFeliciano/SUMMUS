@@ -45,10 +45,33 @@ section {
     border: 1px solid #e74c3c;
 }
 
-.member img {
-    max-width: 100px;
-    border-radius: 50%;
+.member-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Espaço entre os membros */
 }
+
+/* Estilo para cada membro */
+.member {
+    text-align: center;
+    width: 150px /* 20% de largura com espaço de 20px entre membros */
+    margin: 0 50px;
+}
+
+.member img {
+    width: 400px;
+    height: 400px;
+    border: 4px solid #e74c3c; /* Cor da borda */
+}
+
+.member p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
 
 .banner img {
     width: 100%;
@@ -213,41 +236,42 @@ h2{
     font-size: 40px;
     color: #cc1400; 
 }
-/* Estilo para os itens do menu */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 nav ul li {
-    margin: 0 15px;
     display: inline-block;
-    position: relative;
+    margin: 0;
 }
 
-/* Estilo para o quadrado envolta dos itens do menu */
-nav ul li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border: 2px solid transparent; /* Cor do quadrado (invisível) */
-    border-radius: 10px; /* Adiciona cantos arredondados */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.3s, border-color 0.3s; /* Adiciona transição */
-    z-index: -1; /* Coloca o quadrado atrás do conteúdo */
-}
-
-/* Estilo quando o mouse está sobre os itens do menu */
-nav ul li:hover::before {
-    border-color: #e74c3c; /* Cor do quadrado ao passar o mouse */
-    opacity: 1; /* Torna o quadrado visível */
-}
-
-/* Estilo para os links dos itens do menu */
 nav ul li a {
-    position: relative; /* Mantém o contexto de posicionamento */
-    display: block; /* Transforma o link em um bloco */
-    padding: 10px 0; /* Adiciona espaço ao redor do link */
-    color: #e74c3c;
+    display: block;
+    padding: 20px;
     text-decoration: none;
-    z-index: 1; /* Coloca os links na frente do quadrado */
+    color: #ff3737;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff23236b;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
 }
