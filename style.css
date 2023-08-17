@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    background-color: #cc1400;
 }
 
 body {
@@ -199,4 +200,16 @@ section {
     width: 100%;
     height: 100%;
     border: none;
+}
+p{
+    text-align: justify;
+    font-family:'Archivo', sans-serif;
+    color: #e74c3c; 
+}
+h2{
+    text-align: center;
+    font-family: 'Cherry Bomb One', cursive;
+    font-weight: 500;
+    font-size: 40px;
+    color: #cc1400; 
 }
