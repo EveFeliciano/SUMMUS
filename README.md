@@ -1,1 +1,1 @@
-# https://evefeliciano.github.io/SUMMUS
+# https://SummusCelestial.github.io/SUMMUS
